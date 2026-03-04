@@ -10,9 +10,9 @@ interface TestViewProps {
 }
 
 const QUESTIONS = [
-    { id: 1, text: "Question 1: (Your question here)" },
-    { id: 2, text: "Question 2: (Your question here)" },
-    { id: 3, text: "Question 3: (Your question here)" },
+    { id: 1, text: "Question 1: Vm migration" },
+    { id: 2, text: "Question 2: Desktop virtualization" },
+    { id: 3, text: "Question 3: Google App Engine" },
 ];
 
 export default function TestView({ name, batchNumber, onLogout }: TestViewProps) {
