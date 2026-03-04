@@ -19,7 +19,7 @@ export default function TestView({ name, batchNumber, onLogout }: TestViewProps)
     const [uploadedMap, setUploadedMap] = useState<Record<number, string>>({});
     const [submitted, setSubmitted] = useState(false);
 
-    const allUploaded = QUESTIONS.every((q) => uploadedMap[q.id]);
+    const allUploaded = QUESTIONS.some((q) => uploadedMap[q.id]);
 
     const handleUploadComplete = (qNum: number, url: string) => {
         setUploadedMap((prev) => ({ ...prev, [qNum]: url }));
