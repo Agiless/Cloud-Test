@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import Link from "next/link";
 interface LoginViewProps {
     onLogin: (name: string, batchNumber: string) => void;
 }
@@ -61,6 +61,11 @@ export default function LoginView({ onLogin }: LoginViewProps) {
                 <button type="submit" className="btn-primary">
                     Start Test →
                 </button>
+                <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
+                    <Link href="/results" style={{ color: "var(--muted)", fontSize: "0.85rem", textDecoration: "underline" }}>
+                        Check Results
+                    </Link>
+                </div>
             </form>
         </div>
     );

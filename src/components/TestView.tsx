@@ -57,6 +57,7 @@ export default function TestView({ name, batchNumber, onLogout }: TestViewProps)
                     questionNumber={q.id}
                     questionText={q.text}
                     batchNumber={batchNumber}
+                    name={name}
                     onUploadComplete={handleUploadComplete}
                 />
             ))}

@@ -6,6 +6,7 @@ interface QuestionCardProps {
     questionNumber: number;
     questionText: string;
     batchNumber: string;
+    name: string;
     onUploadComplete: (questionNumber: number, url: string) => void;
 }
 
@@ -13,6 +14,7 @@ export default function QuestionCard({
     questionNumber,
     questionText,
     batchNumber,
+    name,
     onUploadComplete,
 }: QuestionCardProps) {
     const [file, setFile] = useState<File | null>(null);
@@ -56,6 +58,7 @@ export default function QuestionCard({
             formData.append("file", file);
             formData.append("batchNumber", batchNumber);
             formData.append("questionNumber", String(questionNumber));
+            formData.append("name", name);
 
             setProgress(30);
 
