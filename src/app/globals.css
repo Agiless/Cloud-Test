@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #141414;
+  --card-border: #2a2a2a;
+  --accent: #6d5cff;
+  --accent-hover: #7f71ff;
+  --accent-glow: rgba(109, 92, 255, 0.25);
+  --success: #22c55e;
+  --success-bg: rgba(34, 197, 94, 0.1);
+  --error: #ef4444;
+  --muted: #888;
+  --input-bg: #1a1a1a;
+  --input-border: #333;
+  --input-focus-border: #6d5cff;
 }
 
 @theme inline {
@@ -12,15 +24,406 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Login ---- */
+.login-container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.login-card .subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.75rem;
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #555;
+}
+
+.form-group input:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-group .error-text {
+  color: var(--error);
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- Test View ---- */
+.test-container {
+  min-height: 100dvh;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+.test-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.test-header .user-info {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.test-header .user-info strong {
+  color: var(--foreground);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--muted);
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* ---- Question Card ---- */
+.question-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.3s;
+}
+
+.question-card.uploaded {
+  border-color: var(--success);
+}
+
+.question-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.question-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.upload-area {
+  border: 2px dashed var(--input-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.upload-area:hover {
+  border-color: var(--accent);
+  background: rgba(109, 92, 255, 0.05);
+}
+
+.upload-area input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-area .upload-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-area .upload-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.upload-area .upload-label span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.upload-preview {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.upload-preview img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: #111;
+}
+
+.upload-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.btn-upload {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-upload:hover {
+  background: var(--accent-hover);
+}
+
+.btn-upload:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-remove {
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-remove:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background: var(--input-bg);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.upload-success {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--success-bg);
+  border-radius: 0.5rem;
+  color: var(--success);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.upload-success .check-icon {
+  font-size: 1.1rem;
+}
+
+/* ---- Submit All ---- */
+.submit-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+}
+
+.submit-bar .btn-submit {
+  padding: 0.85rem 2.5rem;
+  background: var(--success);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-bar .btn-submit:hover {
+  background: #16a34a;
+}
+
+.submit-bar .btn-submit:active {
+  transform: scale(0.98);
+}
+
+.submit-bar .btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-status {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-right: 1rem;
+}
+
+/* ---- Success Screen ---- */
+.success-screen {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-screen .big-check {
+  width: 80px;
+  height: 80px;
+  background: var(--success-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--success);
+  margin-bottom: 1.5rem;
+  animation: pop 0.4s ease;
+}
+
+.success-screen h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.success-screen p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.15); }
+  100% { transform: scale(1); }
 }
