@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import { evaluateSingleDiagram } from "./evaluateDiagram";
 
 const API_KEYS = [
@@ -8,8 +9,6 @@ const API_KEYS = [
     process.env.GEMINI_KEY_4,
     process.env.GEMINI_KEY_5,
     process.env.GEMINI_KEY_6,
-    process.env.GEMINI_KEY_7,
-    process.env.GEMINI_KEY_8
 ].filter(Boolean) as string[];
 
 interface EvaluationTask {
@@ -53,18 +52,28 @@ async function runWorker(workerIndex: number, task: EvaluationTask) {
         const csvLine = `${task.name},${task.batchNumber},${result}\n`;
         fs.appendFileSync("./src/app/api/upload/result.csv", csvLine, "utf8");
 
-        // Delete the local image after evaluation is complete
-        await fs.promises.unlink(task.imagePath);
-        console.log(`Deleted temporary image: ${task.imagePath}`);
+        // Move the local image after evaluation is complete
+        const destDir = path.join(process.cwd(), "evaluated");
+        if (!fs.existsSync(destDir)) {
+            fs.mkdirSync(destDir, { recursive: true });
+        }
+        const destPath = path.join(destDir, path.basename(task.imagePath));
+        await fs.promises.rename(task.imagePath, destPath);
+        console.log(`Moved image to evaluated folder: ${destPath}`);
     } catch (err) {
         console.error(`Worker Error on ${task.batchNumber}:`, err);
 
-        // Still attempt to delete on error to avoid clutter
+        // Move the file even on error to avoid clutter in the active uploads folder
         try {
-            await fs.promises.unlink(task.imagePath);
-            console.log(`Cleaned up image after error: ${task.imagePath}`);
-        } catch (unlinkErr) {
-            console.error(`Failed to delete image: ${task.imagePath}`, unlinkErr);
+            const destDir = path.join(process.cwd(), "evaluated");
+            if (!fs.existsSync(destDir)) {
+                fs.mkdirSync(destDir, { recursive: true });
+            }
+            const destPath = path.join(destDir, path.basename(task.imagePath));
+            await fs.promises.rename(task.imagePath, destPath);
+            console.log(`Moved image to evaluated folder after error: ${destPath}`);
+        } catch (moveErr) {
+            console.error(`Failed to move image: ${task.imagePath}`, moveErr);
         }
     } finally {
         workersBusy[workerIndex] = false;
