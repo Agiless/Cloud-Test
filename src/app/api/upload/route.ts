@@ -15,7 +15,6 @@ export async function POST(request: NextRequest) {
         const file = formData.get("file") as File | null;
         const batchNumber = formData.get("batchNumber") as string | null;
         const questionNumber = formData.get("questionNumber") as string | null;
-        const name = formData.get("name") as string | null || "Unknown";
 
         if (!file || !batchNumber || !questionNumber) {
             return NextResponse.json(
