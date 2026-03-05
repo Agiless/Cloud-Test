@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
         const base64 = buffer.toString("base64");
         const dataUrl = `data:${file.type};base64,${base64}`;
 
-        const publicId = `class-test/${batchNumber}_q${questionNumber}_${Date.now()}`;
+        const publicId = `class-test/${batchNumber}_${questionNumber}`;
 
         const uploadResult = await cloudinary.uploader.upload(dataUrl, {
             public_id: publicId,
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
         console.log(`Uploaded to Cloudinary: ${uploadResult.secure_url}`);
 
         // Queue for Gemini evaluation (skips if already evaluated)
-        addTask(uploadResult.secure_url, uploadResult.public_id, `${name}_${batchNumber}`);
+        addTask(uploadResult.secure_url, uploadResult.public_id, batchNumber);
 
         return NextResponse.json({ success: true, url: uploadResult.secure_url });
     } catch (error) {

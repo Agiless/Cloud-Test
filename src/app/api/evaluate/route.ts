@@ -36,9 +36,8 @@ export async function POST() {
 
         console.log(`Found ${allImages.length} images in Cloudinary`);
 
-        // Only process files matching batchno_questionno format (e.g. "261045_1")
-        // The filename must be {digits}_{digits} pattern
-        const VALID_NAME_PATTERN = /^\d+_\d+$/;
+        // The filename must start with {digits}_
+        const VALID_NAME_PATTERN = /^\d+_.*/;
 
         // Queue each image (workerQueue will skip already-evaluated ones)
         let queued = 0;
@@ -48,15 +47,15 @@ export async function POST() {
             // Extract filename from the public_id (e.g., "class-test/261045_1" → "261045_1")
             const filename = image.publicId.split("/").pop() || image.publicId;
 
-            // Use only the batch number as the name (e.g., "261045_1" → "261045")
-            const name = filename.split("_")[0];
-
-            // Skip files that don't match batchno_questionno format
-            if (!VALID_NAME_PATTERN.test(name)) {
-                console.log(`Skipping ${image.publicId} — doesn't match batchno_qno format`);
+            // Skip files that don't match format
+            if (!VALID_NAME_PATTERN.test(filename)) {
+                console.log(`Skipping ${image.publicId} — doesn't start with batchno format`);
                 skipped++;
                 continue;
             }
+
+            // Use only the batch number as the name (e.g., "261045_1" → "261045")
+            const name = filename.split("_")[0];
 
             addTask(image.url, image.publicId, name);
             queued++;

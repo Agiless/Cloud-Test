@@ -51,6 +51,7 @@ export default function TestView({ name, batchNumber, onLogout }: TestViewProps)
                 </button>
             </div>
 
+            {/* TEST SECTION COMMENTED OUT 
             {QUESTIONS.map((q) => (
                 <QuestionCard
                     key={q.id}
@@ -73,6 +74,25 @@ export default function TestView({ name, batchNumber, onLogout }: TestViewProps)
                 >
                     Submit All
                 </button>
+            </div>
+            */}
+
+            <div style={{ marginTop: "2rem", textAlign: "center", padding: "3rem 1rem", background: "var(--input-bg)", borderRadius: "1rem", border: "1px solid var(--accent)" }}>
+                <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem", color: "var(--foreground)" }}>Evaluations are Ready</h2>
+                <p style={{ color: "var(--muted)", marginBottom: "2rem" }}>The test has concluded and results have been published.</p>
+                <a href="/results" style={{
+                    display: "inline-block",
+                    padding: "1rem 2.5rem",
+                    background: "var(--accent)",
+                    color: "white",
+                    fontWeight: "600",
+                    borderRadius: "0.5rem",
+                    textDecoration: "none",
+                    boxShadow: "0 0 15px var(--accent-glow)",
+                    transition: "transform 0.2s"
+                }}>
+                    View Leaderboard & Results
+                </a>
             </div>
         </div>
     );

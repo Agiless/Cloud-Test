@@ -23,10 +23,38 @@ export async function GET(request: NextRequest) {
 
         // If a specific batch is searched, return detailed results for it
         if (searchBatch) {
+            // Organizer batch numbers
+            const ORGANIZERS = new Set(["261002", "261042"]);
+
+            if (!studentMap[searchBatch]) {
+                return NextResponse.json({
+                    found: "not_in_class",
+                    batch: searchBatch,
+                    message: "You are not from 3rd CSE A class.",
+                    details: []
+                });
+            }
+
+            if (ORGANIZERS.has(searchBatch)) {
+                return NextResponse.json({
+                    found: "organizer",
+                    batch: searchBatch,
+                    studentName: studentMap[searchBatch],
+                    message: "Organizers do not have evaluation results.",
+                    details: []
+                });
+            }
+
             const batchResults = results.filter((r) => r.name.split("_")[0] === searchBatch);
 
             if (batchResults.length === 0) {
-                return NextResponse.json({ found: false, batch: searchBatch, details: [] });
+                return NextResponse.json({
+                    found: "absent",
+                    batch: searchBatch,
+                    studentName: studentMap[searchBatch],
+                    message: "You were absent for this test.",
+                    details: []
+                });
             }
 
             const details = batchResults.map((r) => ({

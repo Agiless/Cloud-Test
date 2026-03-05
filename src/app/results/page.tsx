@@ -115,12 +115,44 @@ export default function ResultsPage() {
                     </button>
                 </form>
 
-                {/* Detailed result for searched batch */}
                 {searched && loading && (
                     <p style={{ textAlign: "center", color: "var(--muted)", marginTop: "1.5rem" }}>Loading...</p>
                 )}
 
-                {searched && batchDetail && batchDetail.found && (
+                {/* Handle "not found" or custom message states (absent, organizer, not_in_class) */}
+                {searched && !loading && batchDetail && batchDetail.found !== true && (
+                    <div style={{
+                        marginTop: "1.5rem",
+                        padding: "1.5rem",
+                        background: batchDetail.found === "organizer"
+                            ? "rgba(251, 191, 36, 0.1)"
+                            : batchDetail.found === "absent" || batchDetail.found === "not_in_class"
+                                ? "rgba(239, 68, 68, 0.1)"
+                                : "var(--input-bg)",
+                        border: batchDetail.found === "organizer"
+                            ? "1px solid rgba(251, 191, 36, 0.3)"
+                            : batchDetail.found === "absent" || batchDetail.found === "not_in_class"
+                                ? "1px solid rgba(239, 68, 68, 0.3)"
+                                : "1px solid var(--input-border)",
+                        borderRadius: "0.75rem",
+                        textAlign: "center",
+                    }}>
+                        <p style={{
+                            color: batchDetail.found === "organizer"
+                                ? "#fbbf24"
+                                : batchDetail.found === "absent" || batchDetail.found === "not_in_class"
+                                    ? "#ef4444"
+                                    : "var(--muted)",
+                            fontSize: "1.1rem",
+                            fontWeight: "500",
+                        }}>
+                            {batchDetail.message || "No results found for this batch number."}
+                        </p>
+                    </div>
+                )}
+
+                {/* Detailed result for found batch */}
+                {searched && batchDetail && batchDetail.found === true && (
                     <div style={{ marginTop: "1.5rem" }}>
                         <h2 style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "0.75rem", color: "var(--accent)" }}>
                             📝 {batchDetail.studentName || batchDetail.batch} — Batch {batchDetail.batch}
@@ -216,7 +248,7 @@ export default function ResultsPage() {
                 )}
 
                 {/* Leaderboard */}
-                {searched && (
+                {searched && (!batchDetail || batchDetail.found !== "not_in_class") && (
                     <div style={{ marginTop: "2rem" }}>
                         <h2 style={{ fontSize: "1.1rem", fontWeight: "600", marginBottom: "1rem", color: "var(--foreground)" }}>
                             🏆 Leaderboard
