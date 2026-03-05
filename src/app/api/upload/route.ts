@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import { v2 as cloudinary } from "cloudinary";
 import { addTask } from "../../../lib/workerQueue";
-import fs from "fs";
-import path from "path";
 
-// Ensure local uploads directory exists
-const UPLOADS_DIR = path.join(process.cwd(), "uploads");
-if (!fs.existsSync(UPLOADS_DIR)) {
-    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
-}
+// Configure Cloudinary
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function POST(request: NextRequest) {
     try {
@@ -24,20 +24,25 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Generate a unique local filename
-        const ext = file.name.split('.').pop() || 'png';
-        const filename = `${batchNumber}_q${questionNumber}_${Date.now()}.${ext}`;
-        const filePath = path.join(UPLOADS_DIR, filename);
-
-        // Save file locally
+        // Convert file to base64 and upload to Cloudinary
         const buffer = Buffer.from(await file.arrayBuffer());
-        await fs.promises.writeFile(filePath, buffer);
+        const base64 = buffer.toString("base64");
+        const dataUrl = `data:${file.type};base64,${base64}`;
 
-        // Add to the background worker queue format: name, batchno, local-path
-        addTask(filePath, batchNumber, name);
+        const publicId = `class-test/${batchNumber}_q${questionNumber}_${Date.now()}`;
 
-        // Return a mock local URL for the frontend success state (it won't render but satisfies the API)
-        return NextResponse.json({ success: true, url: `/local-upload-queued` });
+        const uploadResult = await cloudinary.uploader.upload(dataUrl, {
+            public_id: publicId,
+            folder: undefined, // public_id already has the folder
+            resource_type: "image",
+        });
+
+        console.log(`Uploaded to Cloudinary: ${uploadResult.secure_url}`);
+
+        // Queue for Gemini evaluation (skips if already evaluated)
+        addTask(uploadResult.secure_url, uploadResult.public_id, `${name}_${batchNumber}`);
+
+        return NextResponse.json({ success: true, url: uploadResult.secure_url });
     } catch (error) {
         console.error("Upload error:", error);
         return NextResponse.json(

@@ -1,0 +1,1343 @@
+[
+  {
+    "publicId": "cloud-test/261045_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772695794/cloud-test/261045_1.jpg",
+    "name": "261045_1",
+    "evaluation": {
+      "score": 97,
+      "correct_blocks": [
+        "Running normally on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative pre-copy",
+        "Stage 3: Stop & copy",
+        "Stage 4: commitment",
+        "Stage 5: Activation",
+        "VM running normally on Host B",
+        "Overhead due to Copying",
+        "Downtime of VM (VM out of state)"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately represents all the stages of Live Virtual Machine Migration in the correct sequence. Both logical regions, 'Overhead Due to Copying' and 'Downtime', are correctly identified and associated with their respective stages. There are minor inaccuracies in the details, such as 'Initialize the host in Docker' in Stage 1 (Docker being a specific containerization technology not always relevant to general VM migration) and a likely typo in Stage 2 ('dirty stages' instead of 'dirty pages'). However, the overall structure, flow, and core concepts are excellently presented."
+    },
+    "evaluatedAt": "2026-03-05T15:10:09.986Z"
+  },
+  {
+    "publicId": "cloud-test/261040_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688894/cloud-test/261040_1.jpg",
+    "name": "261040_1",
+    "evaluation": {
+      "score": 85,
+      "correct_blocks": [
+        "VM running normally on host A",
+        "Stage 0: Pre-Migration",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running normally on host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [
+        "Stage 1: Reservation"
+      ],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all stages of Live VM Migration and presents them in the correct sequence. The logical flow and the identification of 'Overhead Due to Copying' and 'Downtime' are also accurate. The main error is in Stage 1 (Reservation), where the description states 'Initialize the container on host A' instead of the correct target host, Host B. There are also minor phrasing differences in Stage 0 and Stage 3 compared to the reference, but these do not detract from the overall correctness significantly."
+    },
+    "evaluatedAt": "2026-03-05T15:10:11.238Z"
+  },
+  {
+    "publicId": "cloud-test/261011_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772689186/cloud-test/261011_1.jpg",
+    "name": "261011_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's block diagram is exceptionally accurate and complete. All stages, their descriptions, the initial and final states of the VM, and the logical regions for 'Overhead Due to Copying' and 'Downtime' are correctly identified and placed in the precise sequence as described in the reference. The logical flow between blocks is clearly indicated. No stages are missing, incorrect, or extra. This is an outstanding representation of the Live Virtual Machine Migration process."
+    },
+    "evaluatedAt": "2026-03-05T15:10:11.462Z"
+  },
+  {
+    "publicId": "cloud-test/261064_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772695053/cloud-test/261064_1.jpg",
+    "name": "261064_1",
+    "evaluation": {
+      "score": 88,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately identifies all required stages for Live VM Migration, maintains the correct sequence, and demonstrates excellent logical flow, including the iterative loop for pre-copy and the correct placement of 'Overhead Due to Copying' and 'Downtime' regions. The descriptions for most stages are clear and align well with the reference. The primary area for improvement is in Stage 1 (Reservation), where the critical detail of reserving CPU, memory, and system resources is omitted, and the description uses 'Docker' which is a specific implementation rather than the more general 'container or virtual machine environment'. A minor grammatical issue is present in the description for Stage 5, but its meaning is clear."
+    },
+    "evaluatedAt": "2026-03-05T15:10:12.710Z"
+  },
+  {
+    "publicId": "cloud-test/261051_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772695143/cloud-test/261051_1.jpg",
+    "name": "261051_1",
+    "evaluation": {
+      "score": 93,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [
+        "Stage 1: Reservation"
+      ],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all stages, their sequence, and logical flow for Live VM Migration. The placement of 'Overhead Due to Copying' and 'Downtime' is also accurate. The main error is in the description of 'Stage 1: Reservation', which incorrectly specifies 'Docker' and omits critical details about reserving CPU, memory, and system resources. Minor phrasing improvements could be made for Stages 2 and 5 for full clarity."
+    },
+    "evaluatedAt": "2026-03-05T15:10:16.666Z"
+  },
+  {
+    "publicId": "cloud-test/261008_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688859/cloud-test/261008_1.jpg",
+    "name": "261008_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying (region)",
+        "Downtime (region)"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram accurately represents all stages of live VM migration, including the initial and final states, and correctly identifies the 'Overhead' and 'Downtime' regions. The sequence and logical flow are perfect, and the stage descriptions are precise and align well with the reference."
+    },
+    "evaluatedAt": "2026-03-05T15:10:17.932Z"
+  },
+  {
+    "publicId": "cloud-test/261014_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688825/cloud-test/261014_1.jpg",
+    "name": "261014_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM running normally on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM running normally on Host B",
+        "Overhead due to copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is excellent, perfectly aligning with the reference description. All stages are present, correctly sequenced, and the logical flow is accurately depicted with clear arrows. The descriptions within each stage are concise and accurate, and the 'Overhead Due to Copying' and 'Downtime' regions are correctly associated with their respective stages. There are no missing, incorrect, or extra stages."
+    },
+    "evaluatedAt": "2026-03-05T15:10:28.930Z"
+  },
+  {
+    "publicId": "cloud-test/261007_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688816/cloud-test/261007_1.jpg",
+    "name": "261007_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Overhead Due to Copying",
+        "Stage 3: Stop and Copy",
+        "Downtime",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is highly accurate and comprehensive. All stages are present, correctly named, and in the correct sequence. The descriptions within each stage block closely match the reference. The 'Overhead Due to Copying' and 'Downtime' logical regions are also correctly identified and placed. The flow between blocks is logical and clear. A near-perfect submission."
+    },
+    "evaluatedAt": "2026-03-05T15:10:33.671Z"
+  },
+  {
+    "publicId": "cloud-test/261009_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688689/cloud-test/261009_1.jpg",
+    "name": "261009_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram accurately represents all stages of Live VM Migration with correct sequencing and logical flow. All specified blocks and logical regions are present and correctly described, demonstrating a strong understanding of the process. The description for Stage 1 could be slightly more explicit about reserving CPU/memory, but this is a minor detail in an otherwise excellent diagram."
+    },
+    "evaluatedAt": "2026-03-05T15:10:35.660Z"
+  },
+  {
+    "publicId": "cloud-test/261041_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688737/cloud-test/261041_1.jpg",
+    "name": "261041_1",
+    "evaluation": {
+      "score": 95,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Overhead Due to Copying",
+        "Stage 3: Stop and Copy",
+        "Downtime",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately captures all the required stages and their correct sequence for Live Virtual Machine Migration. The logical flow is clear, and the identification of 'Overhead Due to Copying' and 'Downtime' is correctly placed. Minor details in the textual descriptions of Stage 0, 1, 2, and 4 could be more comprehensive to fully match the reference, but the core concepts are well-represented."
+    },
+    "evaluatedAt": "2026-03-05T15:10:39.768Z"
+  },
+  {
+    "publicId": "cloud-test/261030_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688685/cloud-test/261030_1.jpg",
+    "name": "261030_1",
+    "evaluation": {
+      "score": 85,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all stages of Live VM Migration (0-5) and includes the start and end states. The sequence of stages is entirely correct. The logical regions for 'Overhead due to copying' and 'Downtime' are also correctly associated with their respective stages. Minor areas for improvement include explicitly showing arrows from the initial 'VM running on Host A' block to Stage 0, and from Stage 5 to the final 'VM normally running on Host B' block. Additionally, there are a few minor textual inaccuracies within the stage descriptions: In Stage 0, 'VM starts on Host A' could be more precisely 'VM is active on Host A', and 'Resources are freed' should be 'resources are prepared/reserved'. In Stage 3, 'Suspend Host VM on Host A' should be 'Suspend the VM on Host A', and 'Synchronize all VM to Host B' should be more specific, like 'transfer remaining memory pages and VM state'."
+    },
+    "evaluatedAt": "2026-03-05T15:10:41.569Z"
+  },
+  {
+    "publicId": "cloud-test/261005_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688657/cloud-test/261005_1.jpg",
+    "name": "261005_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM running on host A",
+        "Stage 0: PRE-MIGRATION",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM running normally on host B",
+        "Overhead due to copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is excellent, perfectly matching the reference description. All stages, their descriptions, the sequence, and the logical regions (Overhead Due to Copying and Downtime) are correctly represented. No missing, incorrect, or extra stages."
+    },
+    "evaluatedAt": "2026-03-05T15:10:50.625Z"
+  },
+  {
+    "publicId": "cloud-test/261050_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688636/cloud-test/261050_1.jpg",
+    "name": "261050_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM running normally on Host A",
+        "Stage 0: Pre-migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM running normally on Host B",
+        "Overhead due to copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is an excellent representation of the Live Virtual Machine Migration process, accurately capturing all stages, their sequence, and logical flow, including the iterative nature of the pre-copy stage. The logical regions for 'Overhead' and 'Downtime' are correctly placed. Minor nuances in the stage descriptions, such as explicitly mentioning the transfer of 'remaining memory pages and VM state' in Stage 3 or 'VM starts running' in Stage 5, could enhance completeness but do not detract significantly from the overall correctness of this block diagram. The diagram is highly accurate and well-structured."
+    },
+    "evaluatedAt": "2026-03-05T15:10:57.737Z"
+  },
+  {
+    "publicId": "cloud-test/261062_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688632/cloud-test/261062_1.jpg",
+    "name": "261062_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is excellent. All stages and logical regions are correctly identified, sequenced, and described accurately as per the reference. The logical flow is perfectly represented with clear connections between blocks."
+    },
+    "evaluatedAt": "2026-03-05T15:11:01.026Z"
+  },
+  {
+    "publicId": "cloud-test/261029_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688686/cloud-test/261029_1.jpg",
+    "name": "261029_1",
+    "evaluation": {
+      "score": 87,
+      "correct_blocks": [
+        "VM running normally on Host A",
+        "Stage 0: Premigration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative pre-copy",
+        "Stage 3: Stop and copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM running normally on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately presents all required stages of live VM migration in the correct sequence, with a logical flow. Both 'Overhead Due to Copying' and 'Downtime' logical regions are correctly identified and positioned. However, there are some content inaccuracies: a typo ('Black devices' instead of 'Block devices') in Stage 0, missing details on resource reservation in Stage 1, vague descriptions in Stage 4 and 5, and critically, an error in Stage 3 where network traffic redirection via ARP is incorrectly stated to be to Host A instead of Host B."
+    },
+    "evaluatedAt": "2026-03-05T15:11:01.785Z"
+  },
+  {
+    "publicId": "cloud-test/261055_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688607/cloud-test/261055_1.jpg",
+    "name": "261055_1",
+    "evaluation": {
+      "score": 95,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all the stages of Live VM Migration (0-5), the initial and final states, and their correct sequential order. The logical regions 'Overhead Due to Copying' and 'Downtime' are also accurately placed and associated with the correct stages. The descriptions for each stage are accurate, though generally more concise than the reference description. No incorrect or extra blocks were included."
+    },
+    "evaluatedAt": "2026-03-05T15:11:08.274Z"
+  },
+  {
+    "publicId": "cloud-test/261019_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688643/cloud-test/261019_1.jpg",
+    "name": "261019_1",
+    "evaluation": {
+      "score": 94,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram accurately identifies all stages and their correct sequence, along with the correct placement of 'Overhead Due to Copying' and 'Downtime' regions. However, the internal descriptions for Stage 1, Stage 2, and Stage 3 are incomplete. Stage 2 (Iterative Pre-Copy) and Stage 3 (Stop and Copy) notably omit key actions of memory and state transfer."
+    },
+    "evaluatedAt": "2026-03-05T15:11:08.495Z"
+  },
+  {
+    "publicId": "cloud-test/261059_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688593/cloud-test/261059_1.jpg",
+    "name": "261059_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is exceptionally accurate and comprehensive. All stages are present, correctly named, and described with high fidelity to the reference. The sequence of stages is perfect, and the logical regions for 'Overhead Due to Copying' and 'Downtime' are correctly identified and placed. The flow between blocks is clearly indicated. Excellent work."
+    },
+    "evaluatedAt": "2026-03-05T15:11:13.989Z"
+  },
+  {
+    "publicId": "cloud-test/261043_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688557/cloud-test/261043_1.jpg",
+    "name": "261043_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Overhead Due to Copying",
+        "Stage 2: Iterative Pre-Copy",
+        "Downtime",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram perfectly matches the reference description, including all stages, their correct sequence, and the logical regions (Overhead and Downtime). The descriptions for each stage are highly accurate and well-articulated."
+    },
+    "evaluatedAt": "2026-03-05T15:11:24.949Z"
+  },
+  {
+    "publicId": "cloud-test/261025_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688551/cloud-test/261025_1.jpg",
+    "name": "261025_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is highly accurate, depicting all stages of Live VM Migration in the correct sequence with appropriate descriptions. The logical regions for Overhead Due to Copying and Downtime are also correctly identified and linked. There is a minor spelling error in Stage 4 ('reeleasd' instead of 'released') and Stage 1's description could be slightly more explicit about resource reservation, though the current description is contextually sufficient. Overall, an excellent representation of the process."
+    },
+    "evaluatedAt": "2026-03-05T15:11:27.402Z"
+  },
+  {
+    "publicId": "cloud-test/261010_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688573/cloud-test/261010_1.jpg",
+    "name": "261010_1",
+    "evaluation": {
+      "score": 91,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all necessary stages of Live Virtual Machine Migration and presents them in the correct sequence. The logical flow between blocks is accurate, and the 'Overhead Due to Copying' and 'Downtime' regions are correctly indicated. The main error lies in the description of Stage 1 (Reservation), which incorrectly states that the container is initialized on 'Host A' instead of the target 'Host B'. Additionally, the description for Stage 2 uses 'Successive resource' which is a slightly less precise phrasing compared to 'repeatedly in several rounds', though its intent is mostly clear."
+    },
+    "evaluatedAt": "2026-03-05T15:11:28.900Z"
+  },
+  {
+    "publicId": "cloud-test/261037_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688542/cloud-test/261037_1.jpg",
+    "name": "261037_1",
+    "evaluation": {
+      "score": 97,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram provides an exceptionally accurate representation of the live virtual machine migration process. All stages described in the reference are present, correctly named (with minor stylistic variations), and in the precise sequence. The descriptions within each stage block align very well with the reference material. The logical regions for 'Overhead Due to Copying' and 'Downtime' are also correctly associated with their respective stages. Minor deductions were made for a slightly incomplete sentence in the description for 'Stage 2: Iterative precopy' and some visual untidiness in the connection arrows between stages 0 and 1, and 1 and 2, though the intended flow is clear. Overall, a highly commendable and accurate diagram."
+    },
+    "evaluatedAt": "2026-03-05T15:11:31.110Z"
+  },
+  {
+    "publicId": "cloud-test/261013_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688540/cloud-test/261013_1.jpg",
+    "name": "261013_1",
+    "evaluation": {
+      "score": 97,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Overhead Due to Copying",
+        "Stage 2: Iterative Pre-Copy",
+        "Downtime",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram provides an excellent and highly accurate representation of the Live Virtual Machine Migration process. All six stages are correctly identified, named, and described in the proper sequence. The initial and final states of the VM are also accurately depicted. Furthermore, the logical regions for 'Overhead Due to Copying' and 'Downtime' are correctly placed and associated with the respective stages. Minor omissions in descriptive verbosity (e.g., explicitly stating resource reservation details in Stage 1 or VM running during Stage 2) are very minimal and do not detract from the overall correctness and clarity of the diagram."
+    },
+    "evaluatedAt": "2026-03-05T15:11:31.671Z"
+  },
+  {
+    "publicId": "cloud-test/261036_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688539/cloud-test/261036_1.jpg",
+    "name": "261036_1",
+    "evaluation": {
+      "score": 95,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram excellently captures all required stages and their correct sequence, demonstrating a strong understanding of the overall Live VM Migration process. The logical flow between blocks is clear, and the 'Overhead' and 'Downtime' regions are correctly identified and associated. Minor omissions in the completeness of stage descriptions prevent a perfect score, specifically regarding resource reservation in Stage 1, the VM's active state during Stage 2 pre-copy, detailed network redirection in Stage 3, and the confirmation step in Stage 4."
+    },
+    "evaluatedAt": "2026-03-05T15:11:51.288Z"
+  },
+  {
+    "publicId": "cloud-test/261049_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688534/cloud-test/261049_1.jpg",
+    "name": "261049_1",
+    "evaluation": {
+      "score": 95,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all necessary stages of live VM migration and presents them in the correct sequential order. The 'Overhead Due to Copying' and 'Downtime' logical regions are also accurately associated with their respective stages. The descriptions for most stages are precise. However, there are minor inaccuracies in the description for Stage 3 ('Suspend VM on HOST A is transferred' is unclear and a bit incorrect) and a more significant factual error in Stage 4, where 'VM is released to HOST A' should be 'VM state is released from Host A'."
+    },
+    "evaluatedAt": "2026-03-05T15:11:52.851Z"
+  },
+  {
+    "publicId": "cloud-test/261020_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688335/cloud-test/261020_1.jpg",
+    "name": "261020_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is highly accurate and comprehensive. All stages of the Live Virtual Machine Migration process are correctly identified, sequenced, and described with precise details that align closely with the reference description. The logical flow between stages is clearly indicated, and the 'Overhead Due to Copying' and 'Downtime' regions are correctly associated with their respective stages. The only minor points are slight variations in phrasing for Stage 0 and Stage 1 descriptions compared to the reference, but these do not detract from the overall correctness and excellent understanding demonstrated."
+    },
+    "evaluatedAt": "2026-03-05T15:11:53.585Z"
+  },
+  {
+    "publicId": "cloud-test/261039_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688529/cloud-test/261039_1.jpg",
+    "name": "261039_1",
+    "evaluation": {
+      "score": 87,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all stages and the initial/final states of live VM migration, presenting them in the correct sequential order. Key logical regions (Overhead and Downtime) are also identified and associated with the correct conceptual stages. Minor deductions are for slight textual inaccuracies (e.g., 'pre-processing' instead of 'pre-copy', 'select' typo for 'state', 'RoseReciene' typo for 'Resume') and some descriptions being slightly less detailed than the reference. The visual representation and phrasing for the 'Overhead' and 'Downtime' regions could also be clearer regarding their 'during' occurrence, though their identification is correct."
+    },
+    "evaluatedAt": "2026-03-05T15:11:58.559Z"
+  },
+  {
+    "publicId": "cloud-test/261048_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688340/cloud-test/261048_1.jpg",
+    "name": "261048_1",
+    "evaluation": {
+      "score": 75,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 4: Commitment",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [
+        "Stage 1: Reservation",
+        "Stage 3: Stop and Copy",
+        "Stage 5: Activation"
+      ],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all stages and regions in the correct sequence with appropriate logical flow. However, several stage descriptions contain omissions, inaccuracies, or critical typos. Stage 1 misses the reservation of CPU, memory, and system resources. Stage 3 includes an incorrect action ('Synchronize all running VM') and omits the transfer of remaining VM state. Stage 5 contains a critical typo 'cannot to local devices' instead of 'connects to local devices'. Stage 4 also has a minor grammatical inaccuracy ('VM state to Host A' instead of 'on Host A'). Stage 2's description is brief but captures the core actions."
+    },
+    "evaluatedAt": "2026-03-05T15:12:06.019Z"
+  },
+  {
+    "publicId": "cloud-test/261026_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688372/cloud-test/261026_1.jpg",
+    "name": "261026_1",
+    "evaluation": {
+      "score": 73,
+      "correct_blocks": [
+        "VM Normally running on HOST A",
+        "Stage 0: pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Incremental Pre-copy",
+        "VM overhead",
+        "Stage 3: Stop and copy",
+        "Downtime delay on VM",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Normally running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all stages and their sequence, including the start/end points and logical regions (overhead and downtime) associated with the correct stages. However, the descriptions for Stage 2 (Iterative Pre-Copy) are incorrect and miss the core concept of memory page copying. The description for Stage 3 (Stop and Copy) is vague and lacks crucial details, and Stage 4 (Commitment) is missing a description entirely. This indicates a gap in understanding the specific mechanisms during the critical migration phases."
+    },
+    "evaluatedAt": "2026-03-05T15:12:12.596Z"
+  },
+  {
+    "publicId": "cloud-test/261018_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688299/cloud-test/261018_1.jpg",
+    "name": "261018_1",
+    "evaluation": {
+      "score": 100,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is excellent, perfectly aligning with the reference description for Live Virtual Machine Migration. All stages, initial/final states, and logical regions (Overhead Due to Copying, Downtime) are present, correctly sequenced, and logically connected. The descriptions within each stage, while having minor phrasing differences, accurately capture the essence of the process step. There are no missing, incorrect, or extra stages."
+    },
+    "evaluatedAt": "2026-03-05T15:12:17.810Z"
+  },
+  {
+    "publicId": "cloud-test/261053_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688300/cloud-test/261053_1.jpg",
+    "name": "261053_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is excellent, accurately capturing all stages of the Live Virtual Machine Migration process and their correct sequence. The logical flow is clear, and the explicit labeling of 'Overhead Due to Copying' and 'Downtime' in the correct stages demonstrates a strong understanding of the process's implications. The descriptions for most stages are comprehensive and align well with the reference. Minor details were omitted in the description of Stage 1 (explicit resource reservation) and Stage 2 (VM running during pre-copy, repeated rounds), but these do not detract significantly from the overall correctness and clarity."
+    },
+    "evaluatedAt": "2026-03-05T15:12:21.672Z"
+  },
+  {
+    "publicId": "cloud-test/261130_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688319/cloud-test/261130_1.jpg",
+    "name": "261130_1",
+    "evaluation": {
+      "score": 72,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [
+        "Stage 5: Activation"
+      ],
+      "incorrect_blocks": [
+        "Block 'Block device mirrored be Fee resource maintainance' (This content is part of Stage 0 but presented as a separate block, breaking the defined stage structure.)"
+      ],
+      "sequence_correct": false,
+      "feedback": "The student's diagram correctly identifies and sequences most of the key stages of live VM migration (Stages 0, 1, 2, 3, 4). The 'Overhead Due to Copying' region is correctly associated with Stage 2. However, Stage 5 (Activation) is entirely missing, leading to an incomplete process flow from 'Commitment' directly to 'VM Running on Host B'. Additionally, Stage 0 is split into two distinct blocks, which deviates from the reference's single-block representation of this stage. The 'Downtime' logical region, though implied by Stage 3, is not explicitly labeled on the diagram."
+    },
+    "evaluatedAt": "2026-03-05T15:12:23.966Z"
+  },
+  {
+    "publicId": "cloud-test/261046_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688251/cloud-test/261046_1.jpg",
+    "name": "261046_1",
+    "evaluation": {
+      "score": 97,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying (labeled as 'VM over due to copy')",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately represents the live VM migration process. All necessary stages are present in the correct sequence, and the logical flow between them is perfectly maintained. The key logical regions ('Overhead Due to Copying' and 'Downtime') are also correctly identified and placed relative to their respective stages. Minor deductions are applied for slight textual inaccuracies and informal phrasing in the detailed descriptions within Stage 0 (VM activation context), a minor typo in Stage 1, phrasing in Stage 4 ('reduced' instead of 'released'), and the informal label 'VM over due to copy' for the overhead region."
+    },
+    "evaluatedAt": "2026-03-05T15:12:25.600Z"
+  },
+  {
+    "publicId": "cloud-test/261022_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688242/cloud-test/261022_1.jpg",
+    "name": "261022_1",
+    "evaluation": {
+      "score": 95,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is excellent, accurately depicting all stages of Live VM Migration in the correct sequence. The logical flow is perfectly maintained, and the descriptions for each stage are largely correct, capturing the core essence of the process. The 'Overhead Due to Copying' and 'Downtime' regions are also correctly placed. Minor areas for improvement include slightly more explicit detail in Stage 1 (resource reservation) and Stage 2 (VM running during copy), and the 'Activate VM on Host A' in Stage 0 is somewhat redundant as an action step, but these are minor semantic points that do not detract significantly from the overall correctness."
+    },
+    "evaluatedAt": "2026-03-05T15:12:28.673Z"
+  },
+  {
+    "publicId": "cloud-test/261016_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688226/cloud-test/261016_1.jpg",
+    "name": "261016_1",
+    "evaluation": {
+      "score": 95,
+      "correct_blocks": [
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram is exceptionally accurate, correctly identifying all stages, their sequence, and the associated logical regions (Overhead Due to Copying, Downtime). The descriptions for each stage closely match the reference, demonstrating a strong understanding of the live VM migration process. The phrasing for Stage 4: Commitment is slightly less precise than the reference ('state of VM on Host A is reduced' vs. 'released after confirming successful migration'), but it conveys the core idea and does not detract significantly from the overall correctness."
+    },
+    "evaluatedAt": "2026-03-05T15:12:47.466Z"
+  },
+  {
+    "publicId": "cloud-test/261023_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688242/cloud-test/261023_1.jpg",
+    "name": "261023_1",
+    "evaluation": {
+      "score": 85,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all stages of Live VM Migration, their correct sequence, and the associated logical regions (Overhead, Downtime). The overall flow is well-represented. However, some stage descriptions are either too specific (e.g., mentioning Docker in Stage 1) or lack key details compared to the reference (e.g., missing resource reservation in Stage 1, transfer of remaining memory in Stage 3, or the 'VM continues running' context in Stage 2)."
+    },
+    "evaluatedAt": "2026-03-05T15:12:52.064Z"
+  },
+  {
+    "publicId": "cloud-test/261035_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688234/cloud-test/261035_1.jpg",
+    "name": "261035_1",
+    "evaluation": {
+      "score": 88,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies all stages of live VM migration, including the start and end states, and the logical regions of 'Overhead Due to Copying' (labeled 'VM copying') and 'Downtime'. The sequence of all stages is perfectly correct. Descriptions for most stages are accurate, but there are minor omissions in Stage 0 (resource preparation) and Stage 1 (explicit resource reservation). In Stage 2, 'successfull round' is less precise than 'repeatedly in several rounds'. A minor factual inaccuracy exists in Stage 4 where the VM state is described as being released 'on host B' instead of 'on host A'."
+    },
+    "evaluatedAt": "2026-03-05T15:12:56.128Z"
+  },
+  {
+    "publicId": "cloud-test/261061_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688208/cloud-test/261061_1.jpg",
+    "name": "261061_1",
+    "evaluation": {
+      "score": 98,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately identifies all key stages of live VM migration and their correct sequential flow. The associated logical regions for copying overhead and downtime are also correctly placed. Minor improvements could be made to the completeness of stage descriptions for Pre-Migration and Reservation, and a slight correction to the description of VM state release in the Commitment stage. No stages are missing, incorrect, or out of sequence."
+    },
+    "evaluatedAt": "2026-03-05T15:12:57.282Z"
+  },
+  {
+    "publicId": "cloud-test/261054_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688224/cloud-test/261054_1.jpg",
+    "name": "261054_1",
+    "evaluation": {
+      "score": 90,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram accurately represents all stages of live VM migration in the correct sequence, including the initial and final states and the logical regions for 'Overhead Due to Copying' and 'Downtime'. The logical flow between blocks is correctly depicted with arrows. All required stages are present, and there are no incorrect or extra stages. However, some block descriptions are not as complete as the reference: Stage 1 ('Reservation') is slightly brief by omitting explicit mention of CPU, memory, and system resource reservation. More significantly, Stage 3 ('Stop and Copy') omits the crucial step of transferring the remaining memory pages and VM state to Host B, which is a core part of this stage."
+    },
+    "evaluatedAt": "2026-03-05T15:12:59.705Z"
+  },
+  {
+    "publicId": "cloud-test/261027_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688207/cloud-test/261027_1.jpg",
+    "name": "261027_1",
+    "evaluation": {
+      "score": 84,
+      "correct_blocks": [
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all 6 stages (0-5) in their exact sequence, along with accurate depiction of the VM's start and end states. The 'Overhead Due to Copying' and 'Downtime' regions are also correctly placed and associated. Minor deductions are for slight inaccuracies or awkward phrasing in the textual descriptions within Stage 0, Stage 2 (e.g., 'in success rates'), Stage 3 (e.g., label typo 'stages' instead of 'Stage 3' and 'synchronize all running VM'), and Stage 5."
+    },
+    "evaluatedAt": "2026-03-05T15:13:05.823Z"
+  },
+  {
+    "publicId": "cloud-test/261047_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688203/cloud-test/261047_1.jpg",
+    "name": "261047_1",
+    "evaluation": {
+      "score": 85,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying (labeled as 'Copying')",
+        "Downtime (labeled as 'Downtime')"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately represents all the core stages of the Live Virtual Machine Migration process in the correct sequential order, including the initial and final states. The descriptions for each stage largely align with the reference, capturing the essential activities. The logical flow is clearly indicated, and the 'Copying' and 'Downtime' regions are correctly associated with their respective stages. Minor deductions are for the diagram's title, which incorrectly states 'VM to another VM' instead of 'Host to another Host', and some minor phrasing ambiguities in the descriptions for Stage 2 and Stage 3."
+    },
+    "evaluatedAt": "2026-03-05T15:13:20.061Z"
+  },
+  {
+    "publicId": "cloud-test/261057_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688161/cloud-test/261057_1.jpg",
+    "name": "261057_1",
+    "evaluation": {
+      "score": 91,
+      "correct_blocks": [
+        "Virtual machine running normally on Host A",
+        "Stage 0: Pre Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iteration Pre-copy",
+        "Overhead due to copying",
+        "VM suspended (Downtime)",
+        "Stage 3: Stop and copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM runs on host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all essential stages of Live VM Migration, including the initial/final states and associated logical regions (overhead, downtime). The sequence and logical flow between stages are perfectly depicted. Minor improvements could be made by including more descriptive details within some stage descriptions, such as specifying resource reservation in Stage 1, the continuous memory copying aspect in Stage 2, and the transfer of remaining state in Stage 3, to fully align with the reference's completeness."
+    },
+    "evaluatedAt": "2026-03-05T15:13:28.951Z"
+  },
+  {
+    "publicId": "cloud-test/261058_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688153/cloud-test/261058_1.jpg",
+    "name": "261058_1",
+    "evaluation": {
+      "score": 80,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment"
+      ],
+      "sequence_correct": true,
+      "feedback": "The student correctly identified all stages of Live VM Migration and placed them in the correct sequence. The 'Overhead Due to Copying' and 'Downtime' logical regions were also correctly noted. However, the descriptions for 'Stage 3: Stop and Copy' incorrectly state that the VM starts active on Host B (activation occurs in Stage 5), and the description for 'Stage 4: Commitment' misinterprets the purpose of releasing the VM state on Host A."
+    },
+    "evaluatedAt": "2026-03-05T15:13:29.070Z"
+  },
+  {
+    "publicId": "cloud-test/261017_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688195/cloud-test/261017_1.jpg",
+    "name": "261017_1",
+    "evaluation": {
+      "score": 79,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Incremental Pre-Copy",
+        "VM Overhead",
+        "Stage 3: Stop and Copy",
+        "Downtime Delay on VM",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [
+        "Stage 0: Pre-Migration (description)",
+        "Stage 1: Reservation (description)",
+        "Stage 5: Activation (description)"
+      ],
+      "sequence_correct": true,
+      "feedback": "The student correctly identified all main stages of the live migration process and arranged them in the correct sequence, including the pre/post-migration states and the associated overhead and downtime regions. However, there are significant inaccuracies in the detailed descriptions provided for Stage 0 (Pre-Migration), Stage 1 (Reservation), and Stage 5 (Activation), indicating a misunderstanding of the specific actions and target hosts/entities for these critical stages."
+    },
+    "evaluatedAt": "2026-03-05T15:13:34.398Z"
+  },
+  {
+    "publicId": "cloud-test/261034_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688143/cloud-test/261034_1.jpg",
+    "name": "261034_1",
+    "evaluation": {
+      "score": 90,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 3: Stop and Copy",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 4: Commitment"
+      ],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies the start and end states of the VM migration, all the core stages, and the logical regions for 'copying' overhead and 'downtime'. The sequence of stages is entirely correct. However, there are minor inaccuracies in the naming of 'Stage 2: Iterative Pre-Copy' (student named it 'copy the VM from one VM to another') and a significant conceptual error in the description for 'Stage 4: Commitment' (student described it as 'VM state is reloaded on VM-state Host A' instead of being released from Host A)."
+    },
+    "evaluatedAt": "2026-03-05T15:13:40.425Z"
+  },
+  {
+    "publicId": "cloud-test/261056_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688097/cloud-test/261056_1.jpg",
+    "name": "261056_1",
+    "evaluation": {
+      "score": 81,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all stages (0-5), their numerical sequence, the initial/final VM states, and correctly places the logical regions 'Overhead Due to Copying' and 'VM Suspended' (Downtime) structurally. However, there are significant inaccuracies in the descriptions and logical flow of actions within several stages. The student incorrectly places 'Suspend VM on host A' and 'Generate ARP to redirect traffic' in Stage 2 (Iterative Pre-Copy), which is fundamentally incorrect for a 'live' migration where the VM should continue running. Stage 3 (Stop and Copy) is then incomplete, missing the crucial transfer of remaining memory/VM state and network redirection. Stage 0's description is also imprecise. These errors indicate a partial misunderstanding of the detailed process steps, especially regarding the 'live' aspect during pre-copy."
+    },
+    "evaluatedAt": "2026-03-05T15:13:49.944Z"
+  },
+  {
+    "publicId": "cloud-test/261033_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688079/cloud-test/261033_1.jpg",
+    "name": "261033_1",
+    "evaluation": {
+      "score": 65,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [
+        "Stage 4: Commitment"
+      ],
+      "incorrect_blocks": [
+        "Stage 4: Down Time of VMA"
+      ],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies most of the key stages (0, 1, 2, 3, 5) and maintains the correct numerical sequence and logical flow between them. The initial and final states of the VM are also accurate. The inclusion of 'Shadow Paging' for Stage 2 demonstrates good conceptual understanding. However, the most significant issue is with Stage 4: the correct 'Commitment' stage is missing, and instead, 'Down Time of VMA' is incorrectly labeled as Stage 4. While 'Downtime' is a relevant concept, it is a characteristic of Stage 3 ('Stop and Copy') and not a separate Stage 4. This conceptual confusion and mislabeling of Stage 4 needs correction."
+    },
+    "evaluatedAt": "2026-03-05T15:13:57.900Z"
+  },
+  {
+    "publicId": "cloud-test/261052_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688035/cloud-test/261052_1.jpg",
+    "name": "261052_1",
+    "evaluation": {
+      "score": 92,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "VM Suspended"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram accurately captures all the essential stages of Live Virtual Machine Migration and sequences them correctly. The logical regions for 'Overhead due to copying' and 'VM Suspended' are appropriately placed, reflecting the key characteristics of Stage 2 and Stage 3 respectively. While the stage descriptions are correct in their core concepts, some details from the reference description (e.g., resource preparation in Stage 0, full resource reservation in Stage 1, explicit mention of VM running during iterative copy in Stage 2, transfer of remaining state and explicit 'Downtime' in Stage 3) are omitted or condensed."
+    },
+    "evaluatedAt": "2026-03-05T15:13:58.837Z"
+  },
+  {
+    "publicId": "cloud-test/261024_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688048/cloud-test/261024_1.jpg",
+    "name": "261024_1",
+    "evaluation": {
+      "score": 80,
+      "correct_blocks": [
+        "VM normally running on Host A",
+        "Stage 0: Pre Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: copy and stop.",
+        "Stage 4: commitment",
+        "Stage 5: Activation",
+        "VM normally running on Host B",
+        "VM overhead",
+        "Downtime delay on VM"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all stages of live VM migration and their proper sequence, including the iterative pre-copy loop and the associated overhead and downtime regions. However, there are significant conceptual errors in the descriptions for Stages 1, 2, and 3. The student repeatedly refers to 'files' instead of 'memory pages' being copied during the iterative pre-copy and stop-and-copy stages, which is a fundamental misunderstanding of the process. Additionally, resource 'reservation' (Stage 1) is incorrectly described as 'creating a container to store files'. Stage 0's description is vague, and Stage 3's description is confusing and incorrect. Descriptions for Stages 4 and 5 are accurate but brief."
+    },
+    "evaluatedAt": "2026-03-05T15:14:02.407Z"
+  },
+  {
+    "publicId": "cloud-test/261003_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772688007/cloud-test/261003_1.jpg",
+    "name": "261003_1",
+    "evaluation": {
+      "score": 70,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [
+        "Stage 4: Commitment"
+      ],
+      "incorrect_blocks": [
+        "Stage: Discontinue of VM A"
+      ],
+      "sequence_correct": false,
+      "feedback": "The diagram correctly identifies most key stages of live VM migration, including the initial and final states, pre-migration, reservation, iterative pre-copy (with shadow paging), stop and copy (with downtime), and activation. The inclusion of 'Shadow Paging' and 'Downtime' as associated concepts for their respective stages is a strong point. However, the 'Commitment' stage (Stage 4) is missing from the sequence, and an extra 'Discontinue of VM A' stage is included, which deviates from the standard process flow and impacts the overall sequence accuracy."
+    },
+    "evaluatedAt": "2026-03-05T15:14:08.522Z"
+  },
+  {
+    "publicId": "cloud-test/261006_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772687961/cloud-test/261006_1.jpg",
+    "name": "261006_1",
+    "evaluation": {
+      "score": 85,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "Stage 5: Activation",
+        "VM Running on Host B",
+        "Overhead Due to Copying",
+        "Downtime"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies all necessary stages of Live VM Migration, including the initial/final VM states and the logical regions for 'Overhead Due to Copying' and 'Downtime'. The sequence of all stages is perfectly aligned with the reference description, and the logical flow between blocks is clear and correct. However, there is a conceptual error in the description for Stage 1 (Reservation), where it states 'Initialize host A'. This stage should involve reserving resources and initializing the environment on the *target host (Host B)*, not the source host (Host A)."
+    },
+    "evaluatedAt": "2026-03-05T15:14:14.723Z"
+  },
+  {
+    "publicId": "cloud-test/261060_1",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772687922/cloud-test/261060_1.jpg",
+    "name": "261060_1",
+    "evaluation": {
+      "score": 69,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Start Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 5: Activation",
+        "VM Running on Host B"
+      ],
+      "missing_blocks": [
+        "Stage 4: Commitment"
+      ],
+      "incorrect_blocks": [
+        "Stage 4: Downtime of VM A"
+      ],
+      "sequence_correct": true,
+      "feedback": "The diagram correctly identifies most stages (0, 1, 3, 5) and the initial/final states. The logical flow between blocks is accurate. Stage 2, labeled 'Start Copy,' is a simplification of 'Iterative Pre-Copy,' but the accompanying 'Shadow Paging' annotation correctly indicates the mechanism of this phase. However, Stage 4 is incorrectly named 'Downtime of VM A' instead of 'Commitment.' 'Downtime' is a consequence or a logical region, not a distinct process stage at this point in the migration. The description 'VM starts normally' in Stage 0 is also inaccurate, as the VM is already running during pre-migration. The overall sequence of numbered stages is correct."
+    },
+    "evaluatedAt": "2026-03-05T15:14:20.612Z"
+  },
+  {
+    "publicId": "class-test/261012_q1_1772725105502",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772725112/class-test/261012_q1_1772725105502.jpg",
+    "name": "261012_1",
+    "evaluation": {
+      "score": 85,
+      "correct_blocks": [
+        "VM Running on Host A",
+        "Stage 0: Pre-Migration",
+        "Stage 1: Reservation",
+        "Stage 2: Iterative Pre-Copy",
+        "Stage 3: Stop and Copy",
+        "Stage 4: Commitment",
+        "VM Running on Host B",
+        "Overhead Due to Copying"
+      ],
+      "missing_blocks": [
+        "Stage 5: Activation",
+        "Downtime (as a logical region)"
+      ],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student's diagram correctly identifies and describes most key stages of live VM migration (Stages 0-4), including initial/final states and the 'Overhead Due to Copying' region. The logical flow between these stages is correct. However, the crucial 'Stage 5: Activation' is entirely missing, and the 'Downtime' logical region is not explicitly indicated, leading to an incomplete representation of the overall migration process."
+    },
+    "evaluatedAt": "2026-03-05T15:39:06.545Z"
+  },
+  {
+    "publicId": "class-test/261004_q1_1772725192114",
+    "imageUrl": "https://res.cloudinary.com/diduybjz1/image/upload/v1772725198/class-test/261004_q1_1772725192114.jpg",
+    "name": "261004_1",
+    "evaluation": {
+      "score": 87,
+      "correct_blocks": [
+        "Pre-Migration",
+        "Reservation",
+        "Iterative Pre-Copy",
+        "Stop and Copy",
+        "Commitment",
+        "Activation"
+      ],
+      "missing_blocks": [],
+      "incorrect_blocks": [],
+      "sequence_correct": true,
+      "feedback": "The student demonstrates excellent understanding of the live VM migration process, correctly identifying all key stages and their logical sequence, including the overhead and downtime regions. The logical flow is clear. However, there are significant errors in stage numbering (Stage 0 mislabeled as Stage 1, and Stage 1 duplicated for two different stages) and a minor typo ('Resecration' instead of 'Reservation'). Some stage descriptions are also slightly less detailed than the reference."
+    },
+    "evaluatedAt": "2026-03-05T15:40:35.089Z"
+  }
+]
