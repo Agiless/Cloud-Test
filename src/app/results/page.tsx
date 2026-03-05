@@ -136,7 +136,7 @@ export default function ResultsPage() {
                             textAlign: "center",
                             color: "#fff",
                         }}>
-                            Best Score: {batchDetail.bestScore} / 100
+                            Score: {batchDetail.bestScore} / 100
                         </div>
 
                         {batchDetail.details.map((detail, idx) => (
