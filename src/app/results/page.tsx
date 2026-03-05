@@ -24,10 +24,11 @@ interface DetailResult {
 }
 
 interface BatchDetail {
-    found: boolean;
+    found: boolean | string;
     batch: string;
     studentName?: string;
     bestScore?: number;
+    message?: string;
     details: DetailResult[];
 }
 
